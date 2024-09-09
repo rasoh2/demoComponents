@@ -26,7 +26,6 @@ export const MultipleSelect = () => {
     const regionName = e.target.value;
     setSelectedRegion(regionName);
 
-    // Encontrar provincias para la región seleccionada
     const region = data.find((r) => r.region === regionName);
     setProvinces(region ? region.provincias : []);
     setSelectedProvince("");
@@ -47,14 +46,12 @@ export const MultipleSelect = () => {
     setSelectedCommune(e.target.value);
   };
   const handleSubmit = () => {
-    // Aquí puedes manejar el envío de datos
     console.log({
       selectedRegion,
       selectedProvince,
       selectedCommune,
     });
 
-    // Reiniciar los selectores
     setSelectedRegion("");
     setSelectedProvince("");
     setSelectedCommune("");
@@ -85,7 +82,6 @@ export const MultipleSelect = () => {
             ))}
           </select>
         </div>
-
         {/* Segundo Selector */}
         <div className='mb-3'>
           <label htmlFor='provinceSelector' className='form-label'>
@@ -126,7 +122,6 @@ export const MultipleSelect = () => {
             ))}
           </select>
         </div>
-
         {/* Botón de Enviar */}
         <button
           type='button'
