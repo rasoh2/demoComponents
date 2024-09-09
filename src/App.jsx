@@ -1,8 +1,8 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-import { MultipleSelect } from './components/MultipleSelect/MultipleSelect'
+import "./App.css";
+import { MultipleSelect } from "./components/MultipleSelect/MultipleSelect";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -11,7 +11,7 @@ function App() {
     <>
       <MultipleSelect />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
