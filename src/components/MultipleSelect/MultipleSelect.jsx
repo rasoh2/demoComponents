@@ -60,21 +60,20 @@ export const MultipleSelect = () => {
   };
 
   return (
-    <div className='container mt-5'>
-      <h2 className='text-center mb-4'>Formulario con Tres Selectores</h2>
+    <div className="container mt-5">
       <form>
         {/* Primer Selector */}
-        <div className='mb-3'>
-          <label htmlFor='regionSelector' className='form-label'>
+        <div className="mb-3">
+          <label htmlFor="regionSelector" className="form-label">
             Region
           </label>
           <select
-            id='regionSelector'
-            className='form-select'
+            id="regionSelector"
+            className="form-select"
             value={selectedRegion}
             onChange={handleRegionChange}
           >
-            <option value=''>Selecciona una región</option>
+            <option value="">Selecciona una región</option>
             {regions.map((region) => (
               <option key={region.region} value={region.region}>
                 {region.region}
@@ -83,18 +82,18 @@ export const MultipleSelect = () => {
           </select>
         </div>
         {/* Segundo Selector */}
-        <div className='mb-3'>
-          <label htmlFor='provinceSelector' className='form-label'>
+        <div className="mb-3">
+          <label htmlFor="provinceSelector" className="form-label">
             Provincia
           </label>
           <select
-            id='provinceSelector'
-            className='form-select'
+            id="provinceSelector"
+            className="form-select"
             value={selectedProvince}
             onChange={handleProvinceChange}
             disabled={!selectedRegion}
           >
-            <option value=''>Selecciona una provincia</option>
+            <option value="">Selecciona una provincia</option>
             {provinces.map((province) => (
               <option key={province.name} value={province.name}>
                 {province.name}
@@ -103,18 +102,18 @@ export const MultipleSelect = () => {
           </select>
         </div>
         {/* Tercer Selector */}
-        <div className='mb-3'>
-          <label htmlFor='communeSelector' className='form-label'>
+        <div className="mb-3">
+          <label htmlFor="communeSelector" className="form-label">
             Comuna
           </label>
           <select
-            id='communeSelector'
-            className='form-select'
+            id="communeSelector"
+            className="form-select"
             value={selectedCommune}
             onChange={handleCommuneChange}
             disabled={!selectedProvince}
           >
-            <option value=''>Selecciona una comuna</option>
+            <option value="">Selecciona una comuna</option>
             {communes.map((commune) => (
               <option key={commune.code} value={commune.code}>
                 {commune.name}
@@ -124,8 +123,8 @@ export const MultipleSelect = () => {
         </div>
         {/* Botón de Enviar */}
         <button
-          type='button'
-          className='btn btn-primary'
+          type="button"
+          className="btn btn-primary"
           onClick={handleSubmit}
           disabled={!selectedCommune}
         >

@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <h2 className="text-center mb-4">Formulario con Tres Selectores</h2>
       <MultipleSelect />
     </>
   );
